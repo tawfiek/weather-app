@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/tawfiek/weather-app/issues"
   },
-  "homepage": "https://github.com/tawfiek/weather-app#readme"
+  "homepage": "https://github.com/tawfiek/weather-app#readme",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
 }
