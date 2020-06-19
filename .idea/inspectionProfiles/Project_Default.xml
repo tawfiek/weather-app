@@ -1,0 +1,8 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="TsLint" enabled="false" level="INFORMATION" enabled_by_default="false">
+      <scope name="Project Files" level="TYPO" enabled="false" />
+    </inspection_tool>
+  </profile>
+</component>

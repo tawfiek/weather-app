@@ -4,7 +4,8 @@
   "description": "Weather application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ws --log.format dev --spa index.html"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,6 @@
   },
   "homepage": "https://github.com/tawfiek/weather-app#readme",
   "dependencies": {
-    "request": "^2.88.2"
+    "local-web-server": "^4.2.1"
   }
 }
