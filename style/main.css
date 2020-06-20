@@ -133,14 +133,14 @@ body {
     text-align: end;
     align-items: end;
 }
-.main-data .right-col .today-degree {
+.main-data .right-col #today-degree {
     font-weight: bold;
     font-size: 9rem;
     line-height: 10.5625rem;
 
     color: #FFFFFF;
 }
-.main-data .right-col .from-to {
+.main-data .right-col #from-to {
     font-weight: normal;
     font-size: 3rem;
     line-height: 3.5rem;
@@ -148,7 +148,7 @@ body {
 
     color: #FFFFFF;
 }
-.main-data .right-col .long-description {
+.main-data .right-col #long-description {
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 1.75rem;
