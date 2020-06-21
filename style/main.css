@@ -175,6 +175,15 @@ body {
     margin: 0 3%;
 }
 
+.forecast .details-section .forecast-item.daily {
+    max-width: 40%;
+}
+
+.forecast .details-section .forecast-item.daily .today-degree{
+    max-width: 40%;
+    font-size: 1.8rem;
+}
+
 .forecast .details-section .forecast-item img{
     max-width: inherit;
     margin-top: 14px;

@@ -95,7 +95,7 @@ function _renderDetailsSection(forecastData, timeRange = TIME_RANGE) {
     function _makeItem (itemData, timeFormat) {
         const item = document.createElement('div');
         item.className = 'forecast-item';
-
+        if (TIME_RANGE === 'daily') item.className = 'forecast-item daily';
         const timeItem = document.createElement('div');
         timeItem.className = 'time';
         timeItem.innerText = moment(itemData['time'] * 1000).format(timeFormat);
