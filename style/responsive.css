@@ -1,0 +1,63 @@
+@media only screen and (max-width: 797px) {
+    .container {
+        max-width: 95%;
+    }
+
+    .main-data .left-col,
+    .main-data .right-col,
+    .main-data .left-col *{
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 673px) {
+    .main-data {
+        margin-top: 80px;
+    }
+    .main-data .left-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-data .right-col {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .header {
+        justify-content: center;
+    }
+    #units-section {
+        margin-top: 18px;
+    }
+}
+
+@media only screen and (max-width: 423px) {
+    #app-title {
+       font-size: 2.3rem;
+    }
+    .main-data .left-col h2 { font-size: 3.5rem; }
+    #today-degree { font-size: 8rem; }
+    #from-to { font-size: 2.5rem; }
+    #long-description { font-size: 1.25rem; }
+    .forecast .segment { font-size: 1rem; }
+
+    .forecast .details-section .forecast-item .today-degree {
+        font-size: 1.5rem;
+    }
+    .forecast .details-section .forecast-item {
+        max-width: 35px;
+    }
+    .forecast .details-section .forecast-item .time {
+        font-size: 1.1rem;
+        line-height: 1rem;
+    }
+    .forecast .details-section .forecast-item.daily .today-degree {
+        max-width: 40%;
+        font-size: 1rem;
+    }
+    .forecast .details-section .forecast-item.daily .today-degree {
+        font-size: 1rem;
+    }
+}

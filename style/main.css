@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-    width: 80%;
+    max-width: 80%;
     margin: auto;
     padding-top: 41px;
 }
@@ -35,6 +35,7 @@ body {
     line-height: 2.625rem;
     letter-spacing: 0.05em;
     align-items: center;
+    flex-wrap: wrap;
     color: #fff;
 }
 
@@ -217,4 +218,27 @@ body {
 .forecast .segment .tab.selected {
     color: #ffffff;
     border-bottom: 3px solid #ffffff;
+}
+
+.spinner-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: #000000d9;
+    right: 0;
+    top: 0;
+}
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+    margin: 40% auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

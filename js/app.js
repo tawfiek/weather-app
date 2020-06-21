@@ -92,6 +92,8 @@ function _renderDetailsSection(forecastData, timeRange = TIME_RANGE) {
         detailsSection.appendChild(itemElement);
     });
 
+    document.querySelector('.spinner-container').remove()
+
     function _makeItem (itemData, timeFormat) {
         const item = document.createElement('div');
         item.className = 'forecast-item';
