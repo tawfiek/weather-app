@@ -61,12 +61,22 @@ function _addingSegmentClickListener () {
     });
 }
 
+/**
+ * Calling API from Server class to get the forecast data
+ * @param unit {'us' | 'si' } : the units system we want to use
+ * @return {Promise<ReadableStream<Uint8Array>>}: resolves with forecast data
+ * @private
+ */
 async function _getForecastData (unit = UNIT) {
     console.log('#DEBUG unit => ', unit)
     return  await Service.getForecastData(unit);
 }
 
-
+/**
+ * Renders everything
+ * @param forecastData: forecast data array that comes from API
+ * @private
+ */
 function _render (forecastData) {
     _renderMainSection(forecastData);
     _renderDetailsSection(forecastData);
@@ -94,6 +104,13 @@ function _renderDetailsSection(forecastData, timeRange = TIME_RANGE) {
 
     document.querySelector('.spinner-container').remove()
 
+    /**
+     * Build the details item
+     * @param itemData: the data that comes form API that related to this item
+     * @param timeFormat {String}: the format of the time of this item
+     * @return {HTMLDivElement}: DOM node
+     * @private
+     */
     function _makeItem (itemData, timeFormat) {
         const item = document.createElement('div');
         item.className = 'forecast-item';
@@ -117,6 +134,10 @@ function _renderDetailsSection(forecastData, timeRange = TIME_RANGE) {
         return item;
     }
 
+    /**
+     * removes the old details section if exist and add a new one with new items
+     * @private
+     */
     function _addDetailsSection() {
         const section = document.querySelector('.forecast .details-section');
         const newSection = document.createElement('div');
@@ -127,6 +148,11 @@ function _renderDetailsSection(forecastData, timeRange = TIME_RANGE) {
     }
 }
 
+/**
+ * render the main section that contains the data about location and the current weather
+ * @param forecastData: forecast data that comes form the API of darksky
+ * @private
+ */
 function _renderMainSection (forecastData) {
     const currentData = forecastData['currently']
     const todayDate = moment(currentData['time'] * 1000).format('dddd DD, YYYY');
